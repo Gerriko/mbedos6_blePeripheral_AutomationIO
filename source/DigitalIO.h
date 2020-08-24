@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef __BLE_BUTTON_SERVICE_H__
-#define __BLE_BUTTON_SERVICE_H__
+#ifndef __BLE_DIGITALIO_SERVICE_H__
+#define __BLE_DIGITALIO_SERVICE_H__
 
 #include <mbed.h>
 #include "ble/BLE.h"
@@ -87,4 +87,4 @@ private:
     WriteOnlyGattCharacteristic<uint8_t>    ledState;
 };
 
-#endif /* #ifndef __BLE_BUTTON_SERVICE_H__ */
+#endif /* #ifndef __BLE_DIGITALIO_SERVICE_H__ */
