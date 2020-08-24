@@ -1,0 +1,30 @@
+{
+    "config": {
+        "ble_led_pin_name": {
+            "help": "The pin name used as external led in this application",
+            "value": "p33",
+            "macro_name": "BLE_LED_XEN_D2",
+            "required": true
+        },
+        "ble_button_pin_name": {
+            "help": "The pin name used as external button in this application",
+            "value": "p34",
+            "macro_name": "BLE_BUTTON_XEN_D3",
+            "required": true
+        },
+        "ble_button_pin_pull": {
+            "help": "The BLE button may need a pull-up. Possible values are PullUp, PullDown, PullNone (default).",
+            "macro_name": "BLE_BUTTON_PIN_PULL",
+            "value": "PullNone"
+        }
+    },
+    "target_overrides": {
+        "NRF52840_DK": {
+            "target.features_add": ["BLE"],
+            "ble_button_pin_pull": "PullUp"
+        },
+        "NRF52_DK": {
+            "target.features_add": ["BLE"]
+        }
+    }
+}
